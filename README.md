@@ -1,2 +1,2 @@
 # CS299
-This is my repository for CS299, Introduction to Data Science using Python
+This is my repository for CS299, Introduction to Data Science using Python taught by Professor Sampath Jayarathna
