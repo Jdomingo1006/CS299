@@ -80,16 +80,18 @@ def vwap(stock_dict, ticker):
     vwap = averageDay / averageVolume
     return vwap
 
+#Prints out the VWAP.
 print(vwap(csv_data, ticker))
 
 #For loop to show each ticker
 for i in range(len(tickerList)):
-
-    #Limits the numbers after decimals.
     tickerFinder = ticker_find(xml_dict, tickerList[i])
+    #If it it can find the ticker, it'll go through here
     if tickerFinder!= 'No data in SP500':
         tickerAvg = calc_avg_open(csv_data, tickerList[i])
         tickerVWAP = vwap(csv_data, tickerList[i])
+        # Limits the numbers after decimals.
         print('{0} {1:.4g} {2:.4g}'.format(tickerFinder, tickerAvg, tickerVWAP))
+    #If it can't find the ticker, it'll just print out "No Data in SP500"
     else:
         print(tickerFinder)
